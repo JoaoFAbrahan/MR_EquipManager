@@ -1,7 +1,7 @@
 ﻿
 namespace View
 {
-    partial class F_AcessoriesWindow
+    partial class F_ArtifactWindow
     {
         /// <summary>
         /// Required designer variable.

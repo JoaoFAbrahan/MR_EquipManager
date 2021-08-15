@@ -20,7 +20,7 @@ namespace View.F_Main
         //Referência das Janelas
         protected View.F_HomeWindow Home_Window;
         protected View.F_ArmorsWindow Armors_Window;
-        protected View.F_AcessoriesWindow Acessories_Window;
+        protected View.F_ArtifactWindow Artifact_Window;
         protected View.F_WeaponsWindow Weapons_Window;
         protected View.F_StatisticsWindow Statistics_Window;
 

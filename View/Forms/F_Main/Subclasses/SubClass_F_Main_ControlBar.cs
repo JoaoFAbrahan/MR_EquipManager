@@ -21,7 +21,7 @@ namespace View.F_Main
         {
             // Acessa as funcionalidades da DLL usar32.DLL para que possibilite movimentar a janela usando o MenuBar como alça
             ReleaseCaptue();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            SendMessage(this.Handle, 0x112, 0xf012, 0);          
         }
 
         // Responsividade
@@ -39,7 +39,7 @@ namespace View.F_Main
         {
             base.WndProc(ref message);
 
-            if (message.Msg == 0x84)
+            if (message.Msg == 0x84) //Verifica se a janela foi redimencionada
             {
                 var cursor = this.PointToClient(Cursor.Position);
 
@@ -52,6 +52,12 @@ namespace View.F_Main
                 else if (Left.Contains(cursor)) message.Result = (IntPtr)HTLEFT;
                 else if (Right.Contains(cursor)) message.Result = (IntPtr)HTRIGHT;
                 else if (Bottom.Contains(cursor)) message.Result = (IntPtr)HTBOTTOM;
+            }
+            if (message.Msg == 0x0112) //Verifica se a janela arrastada durante o state.Maximize
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Btn_Normalize.Visible = false;
+                this.Btn_Maximize.Visible = true;
             }
         }
 

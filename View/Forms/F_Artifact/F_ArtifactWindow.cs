@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class F_AcessoriesWindow : Form
+    public partial class F_ArtifactWindow : Form
     {
-        public F_AcessoriesWindow()
+        public F_ArtifactWindow()
         {
             InitializeComponent();
         }

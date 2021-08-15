@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Model_Objects
 {
-    class Class_Acessory
+    class Class_Artifact
     {
 
     }

@@ -30,8 +30,8 @@ namespace View
         private void InitializeComponent()
         {
             this.Panel_MAIN = new System.Windows.Forms.Panel();
-            this.lbl_TituloPagina = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbl_TituloPagina = new System.Windows.Forms.Label();
             this.Panel_MAIN.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,17 @@ namespace View
             this.Panel_MAIN.Size = new System.Drawing.Size(1166, 743);
             this.Panel_MAIN.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(1079, 406);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // lbl_TituloPagina
             // 
             this.lbl_TituloPagina.AutoSize = true;
@@ -58,16 +69,6 @@ namespace View
             this.lbl_TituloPagina.Size = new System.Drawing.Size(129, 54);
             this.lbl_TituloPagina.TabIndex = 0;
             this.lbl_TituloPagina.Text = "Home";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(506, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // F_HomeWindow
             // 

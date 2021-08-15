@@ -302,7 +302,7 @@ namespace View.F_Main
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(650, 460);
+            this.MinimumSize = new System.Drawing.Size(700, 480);
             this.Name = "F_MainWindow";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
