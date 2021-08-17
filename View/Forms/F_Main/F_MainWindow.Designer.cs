@@ -38,7 +38,7 @@ namespace View.F_Main
             this.Panel_MenuBar = new System.Windows.Forms.Panel();
             this.btn_MenuStatistics = new System.Windows.Forms.RadioButton();
             this.btn_MenuWeapons = new System.Windows.Forms.RadioButton();
-            this.btn_MenuAcessories = new System.Windows.Forms.RadioButton();
+            this.btn_MenuArtifact = new System.Windows.Forms.RadioButton();
             this.btn_MenuArmors = new System.Windows.Forms.RadioButton();
             this.btn_MenuHome = new System.Windows.Forms.RadioButton();
             this.PicBox_ImageLogo = new System.Windows.Forms.PictureBox();
@@ -153,7 +153,7 @@ namespace View.F_Main
             this.Panel_MenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
             this.Panel_MenuBar.Controls.Add(this.btn_MenuStatistics);
             this.Panel_MenuBar.Controls.Add(this.btn_MenuWeapons);
-            this.Panel_MenuBar.Controls.Add(this.btn_MenuAcessories);
+            this.Panel_MenuBar.Controls.Add(this.btn_MenuArtifact);
             this.Panel_MenuBar.Controls.Add(this.btn_MenuArmors);
             this.Panel_MenuBar.Controls.Add(this.btn_MenuHome);
             this.Panel_MenuBar.Controls.Add(this.PicBox_ImageLogo);
@@ -184,6 +184,7 @@ namespace View.F_Main
             this.btn_MenuStatistics.TabStop = true;
             this.btn_MenuStatistics.Text = "              Statistics";
             this.btn_MenuStatistics.UseVisualStyleBackColor = true;
+            this.btn_MenuStatistics.CheckedChanged += new System.EventHandler(this.btn_MenuStatistics_CheckedChanged);
             // 
             // btn_MenuWeapons
             // 
@@ -205,27 +206,29 @@ namespace View.F_Main
             this.btn_MenuWeapons.TabStop = true;
             this.btn_MenuWeapons.Text = "              Weapons";
             this.btn_MenuWeapons.UseVisualStyleBackColor = true;
+            this.btn_MenuWeapons.CheckedChanged += new System.EventHandler(this.btn_MenuWeapons_CheckedChanged);
             // 
-            // btn_MenuAcessories
+            // btn_MenuArtifact
             // 
-            this.btn_MenuAcessories.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btn_MenuAcessories.FlatAppearance.BorderSize = 0;
-            this.btn_MenuAcessories.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(242)))));
-            this.btn_MenuAcessories.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(242)))));
-            this.btn_MenuAcessories.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(61)))), ((int)(((byte)(70)))));
-            this.btn_MenuAcessories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_MenuAcessories.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_MenuAcessories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_MenuAcessories.Image = global::View.Properties.Resources.icon_MenuAcessories;
-            this.btn_MenuAcessories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_MenuAcessories.Location = new System.Drawing.Point(0, 240);
-            this.btn_MenuAcessories.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_MenuAcessories.Name = "btn_MenuAcessories";
-            this.btn_MenuAcessories.Size = new System.Drawing.Size(300, 55);
-            this.btn_MenuAcessories.TabIndex = 3;
-            this.btn_MenuAcessories.TabStop = true;
-            this.btn_MenuAcessories.Text = "              Acessories";
-            this.btn_MenuAcessories.UseVisualStyleBackColor = true;
+            this.btn_MenuArtifact.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btn_MenuArtifact.FlatAppearance.BorderSize = 0;
+            this.btn_MenuArtifact.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(242)))));
+            this.btn_MenuArtifact.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(242)))));
+            this.btn_MenuArtifact.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(61)))), ((int)(((byte)(70)))));
+            this.btn_MenuArtifact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MenuArtifact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_MenuArtifact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_MenuArtifact.Image = global::View.Properties.Resources.icon_MenuAcessories;
+            this.btn_MenuArtifact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_MenuArtifact.Location = new System.Drawing.Point(0, 240);
+            this.btn_MenuArtifact.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_MenuArtifact.Name = "btn_MenuArtifact";
+            this.btn_MenuArtifact.Size = new System.Drawing.Size(300, 55);
+            this.btn_MenuArtifact.TabIndex = 3;
+            this.btn_MenuArtifact.TabStop = true;
+            this.btn_MenuArtifact.Text = "              Artifacts";
+            this.btn_MenuArtifact.UseVisualStyleBackColor = true;
+            this.btn_MenuArtifact.CheckedChanged += new System.EventHandler(this.btn_MenuArtifact_CheckedChanged);
             // 
             // btn_MenuArmors
             // 
@@ -247,6 +250,7 @@ namespace View.F_Main
             this.btn_MenuArmors.TabStop = true;
             this.btn_MenuArmors.Text = "              Armors";
             this.btn_MenuArmors.UseVisualStyleBackColor = true;
+            this.btn_MenuArmors.CheckedChanged += new System.EventHandler(this.btn_MenuArmors_CheckedChanged);
             // 
             // btn_MenuHome
             // 
@@ -268,6 +272,7 @@ namespace View.F_Main
             this.btn_MenuHome.TabStop = true;
             this.btn_MenuHome.Text = "              JSON Manager";
             this.btn_MenuHome.UseVisualStyleBackColor = true;
+            this.btn_MenuHome.CheckedChanged += new System.EventHandler(this.btn_MenuHome_CheckedChanged);
             // 
             // PicBox_ImageLogo
             // 
@@ -326,10 +331,10 @@ namespace View.F_Main
         private System.Windows.Forms.Button Btn_Maximize;
         private System.Windows.Forms.Button Btn_Normalize;
         private System.Windows.Forms.PictureBox PicBox_ImageLogo;
-        private System.Windows.Forms.RadioButton btn_MenuAcessories;
-        private System.Windows.Forms.RadioButton btn_MenuArmors;
         private System.Windows.Forms.RadioButton btn_MenuHome;
-        private System.Windows.Forms.RadioButton btn_MenuStatistics;
-        private System.Windows.Forms.RadioButton btn_MenuWeapons;
+        public System.Windows.Forms.RadioButton btn_MenuArtifact;
+        public System.Windows.Forms.RadioButton btn_MenuArmors;
+        public System.Windows.Forms.RadioButton btn_MenuStatistics;
+        public System.Windows.Forms.RadioButton btn_MenuWeapons;
     }
 }

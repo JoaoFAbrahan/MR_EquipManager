@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model.Model_Objects
 {
+    /// <summary>
+    /// Objeto do tipo Weapon
+    /// </summary>
     class Class_Weapon
     {
         public string Name { get; set; }
@@ -21,6 +24,5 @@ namespace Model.Model_Objects
         public long CoinPrice { get; set; }
         public long FreemiumGoldPrice { get; set; }
         public long PremiumGoldPrice { get; set; }
-
     }
 }

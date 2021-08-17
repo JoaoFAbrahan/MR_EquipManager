@@ -25,34 +25,10 @@ namespace View.F_Main
         }
 
         // Responsividade
-        private const int HTLEFT = 10, HTRIGHT = 11, HTTOP = 12, HTTOPLEFT = 13, HTTOPRIGHT = 14, HTBOTTOM = 15, HTBOTTOMLEFT = 16, HTBOTTOMRIGHT = 17;
-        private const int respView = 10;
-        Rectangle Top { get { return new Rectangle(0, 0, this.ClientSize.Width, respView); } }
-        Rectangle Left { get { return new Rectangle(0, 0, respView, this.ClientSize.Height); } }
-        Rectangle Bottom { get { return new Rectangle(0, this.ClientSize.Height - respView, this.ClientSize.Width, respView); } }
-        Rectangle Right { get { return new Rectangle(this.ClientSize.Width - respView, 0, respView, this.ClientSize.Height); } }
-        Rectangle TopLeft { get { return new Rectangle(0, 0, respView, respView); } }
-        Rectangle TopRight { get { return new Rectangle(this.ClientSize.Width - respView, 0, respView, respView); } }
-        Rectangle BottomLeft { get { return new Rectangle(0, this.ClientSize.Height - respView, respView, respView); } }
-        Rectangle BottomRight { get { return new Rectangle(this.ClientSize.Width - respView, this.ClientSize.Height - respView, respView, respView); } }
         protected override void WndProc(ref Message message)
         {
             base.WndProc(ref message);
-
-            if (message.Msg == 0x84) //Verifica se a janela foi redimencionada
-            {
-                var cursor = this.PointToClient(Cursor.Position);
-
-                if (TopLeft.Contains(cursor)) message.Result = (IntPtr)HTTOPLEFT;
-                else if (TopRight.Contains(cursor)) message.Result = (IntPtr)HTTOPRIGHT;
-                else if (BottomLeft.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMLEFT;
-                else if (BottomRight.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMRIGHT;
-
-                else if (Top.Contains(cursor)) message.Result = (IntPtr)HTTOP;
-                else if (Left.Contains(cursor)) message.Result = (IntPtr)HTLEFT;
-                else if (Right.Contains(cursor)) message.Result = (IntPtr)HTRIGHT;
-                else if (Bottom.Contains(cursor)) message.Result = (IntPtr)HTBOTTOM;
-            }
+                        
             if (message.Msg == 0x0112) //Verifica se a janela arrastada durante o state.Maximize
             {
                 this.WindowState = FormWindowState.Normal;
