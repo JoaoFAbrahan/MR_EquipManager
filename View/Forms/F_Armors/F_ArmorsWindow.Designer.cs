@@ -33,7 +33,7 @@ namespace View
             this.Lbl_TituloPagina = new System.Windows.Forms.Label();
             this.TabPanel_Search = new System.Windows.Forms.TableLayoutPanel();
             this.Panel_InputSerchSection = new System.Windows.Forms.Panel();
-            this.Lbl_InsertText = new System.Windows.Forms.Label();
+            this.Lbl_InsertValue = new System.Windows.Forms.Label();
             this.tbx_Input = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.GroupBox_Filter = new System.Windows.Forms.GroupBox();
@@ -47,7 +47,7 @@ namespace View
             this.Lbl_TotalByFilters = new System.Windows.Forms.Label();
             this.Lbl_TotalItens = new System.Windows.Forms.Label();
             this.TabPanel_DataBank = new System.Windows.Forms.TableLayoutPanel();
-            this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.DataGridView_Armors = new System.Windows.Forms.DataGridView();
             this.Panel_Information = new System.Windows.Forms.Panel();
             this.Lbl_ItemInformation = new System.Windows.Forms.Label();
             this.tbx_ItemInfo = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@ namespace View
             this.GroupBox_Filter.SuspendLayout();
             this.Panel_DataInformation.SuspendLayout();
             this.TabPanel_DataBank.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Armors)).BeginInit();
             this.Panel_Information.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,7 +115,7 @@ namespace View
             // 
             // Panel_InputSerchSection
             // 
-            this.Panel_InputSerchSection.Controls.Add(this.Lbl_InsertText);
+            this.Panel_InputSerchSection.Controls.Add(this.Lbl_InsertValue);
             this.Panel_InputSerchSection.Controls.Add(this.tbx_Input);
             this.Panel_InputSerchSection.Controls.Add(this.btn_Search);
             this.Panel_InputSerchSection.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -125,14 +125,14 @@ namespace View
             this.Panel_InputSerchSection.Size = new System.Drawing.Size(481, 130);
             this.Panel_InputSerchSection.TabIndex = 1;
             // 
-            // Lbl_InsertText
+            // Lbl_InsertValue
             // 
-            this.Lbl_InsertText.AutoSize = true;
-            this.Lbl_InsertText.Location = new System.Drawing.Point(34, 41);
-            this.Lbl_InsertText.Name = "Lbl_InsertText";
-            this.Lbl_InsertText.Size = new System.Drawing.Size(63, 15);
-            this.Lbl_InsertText.TabIndex = 3;
-            this.Lbl_InsertText.Text = "Insert Text:";
+            this.Lbl_InsertValue.AutoSize = true;
+            this.Lbl_InsertValue.Location = new System.Drawing.Point(34, 41);
+            this.Lbl_InsertValue.Name = "Lbl_InsertValue";
+            this.Lbl_InsertValue.Size = new System.Drawing.Size(76, 15);
+            this.Lbl_InsertValue.TabIndex = 3;
+            this.Lbl_InsertValue.Text = "Search value:";
             // 
             // tbx_Input
             // 
@@ -241,7 +241,7 @@ namespace View
             this.lbl_NumFilter.AutoSize = true;
             this.lbl_NumFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_NumFilter.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_NumFilter.Location = new System.Drawing.Point(79, 69);
+            this.lbl_NumFilter.Location = new System.Drawing.Point(105, 69);
             this.lbl_NumFilter.Name = "lbl_NumFilter";
             this.lbl_NumFilter.Size = new System.Drawing.Size(19, 21);
             this.lbl_NumFilter.TabIndex = 3;
@@ -252,7 +252,7 @@ namespace View
             this.lbl_NumTotal.AutoSize = true;
             this.lbl_NumTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_NumTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_NumTotal.Location = new System.Drawing.Point(79, 41);
+            this.lbl_NumTotal.Location = new System.Drawing.Point(105, 41);
             this.lbl_NumTotal.Name = "lbl_NumTotal";
             this.lbl_NumTotal.Size = new System.Drawing.Size(19, 21);
             this.lbl_NumTotal.TabIndex = 2;
@@ -265,9 +265,9 @@ namespace View
             this.Lbl_TotalByFilters.Location = new System.Drawing.Point(0, 69);
             this.Lbl_TotalByFilters.Margin = new System.Windows.Forms.Padding(0);
             this.Lbl_TotalByFilters.Name = "Lbl_TotalByFilters";
-            this.Lbl_TotalByFilters.Size = new System.Drawing.Size(69, 21);
+            this.Lbl_TotalByFilters.Size = new System.Drawing.Size(105, 21);
             this.Lbl_TotalByFilters.TabIndex = 1;
-            this.Lbl_TotalByFilters.Text = "By Filter:";
+            this.Lbl_TotalByFilters.Text = "Total by Filter:";
             // 
             // Lbl_TotalItens
             // 
@@ -276,16 +276,16 @@ namespace View
             this.Lbl_TotalItens.Location = new System.Drawing.Point(0, 41);
             this.Lbl_TotalItens.Margin = new System.Windows.Forms.Padding(0);
             this.Lbl_TotalItens.Name = "Lbl_TotalItens";
-            this.Lbl_TotalItens.Size = new System.Drawing.Size(45, 21);
+            this.Lbl_TotalItens.Size = new System.Drawing.Size(87, 21);
             this.Lbl_TotalItens.TabIndex = 0;
-            this.Lbl_TotalItens.Text = "Total:";
+            this.Lbl_TotalItens.Text = "Total Items:";
             // 
             // TabPanel_DataBank
             // 
             this.TabPanel_DataBank.ColumnCount = 2;
             this.TabPanel_DataBank.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TabPanel_DataBank.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
-            this.TabPanel_DataBank.Controls.Add(this.DataGridView, 0, 0);
+            this.TabPanel_DataBank.Controls.Add(this.DataGridView_Armors, 0, 0);
             this.TabPanel_DataBank.Controls.Add(this.Panel_Information, 1, 0);
             this.TabPanel_DataBank.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabPanel_DataBank.Location = new System.Drawing.Point(0, 250);
@@ -296,21 +296,21 @@ namespace View
             this.TabPanel_DataBank.Size = new System.Drawing.Size(1166, 493);
             this.TabPanel_DataBank.TabIndex = 6;
             // 
-            // DataGridView
+            // DataGridView_Armors
             // 
-            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridView_Armors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView_Armors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Col_Name,
             this.Col_Element,
             this.Col_Type,
             this.Col_Armor});
-            this.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridView.Location = new System.Drawing.Point(40, 0);
-            this.DataGridView.Margin = new System.Windows.Forms.Padding(40, 0, 20, 40);
-            this.DataGridView.Name = "DataGridView";
-            this.DataGridView.RowTemplate.Height = 25;
-            this.DataGridView.Size = new System.Drawing.Size(831, 453);
-            this.DataGridView.TabIndex = 0;
+            this.DataGridView_Armors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGridView_Armors.Location = new System.Drawing.Point(40, 0);
+            this.DataGridView_Armors.Margin = new System.Windows.Forms.Padding(40, 0, 20, 40);
+            this.DataGridView_Armors.Name = "DataGridView_Armors";
+            this.DataGridView_Armors.RowTemplate.Height = 25;
+            this.DataGridView_Armors.Size = new System.Drawing.Size(831, 453);
+            this.DataGridView_Armors.TabIndex = 0;
             // 
             // Panel_Information
             // 
@@ -349,23 +349,27 @@ namespace View
             // 
             this.Col_Name.HeaderText = "Name";
             this.Col_Name.Name = "Col_Name";
+            this.Col_Name.ReadOnly = true;
             this.Col_Name.Width = 300;
             // 
             // Col_Element
             // 
             this.Col_Element.HeaderText = "Element";
             this.Col_Element.Name = "Col_Element";
+            this.Col_Element.ReadOnly = true;
             // 
             // Col_Type
             // 
             this.Col_Type.HeaderText = "Type";
             this.Col_Type.Name = "Col_Type";
+            this.Col_Type.ReadOnly = true;
             // 
             // Col_Armor
             // 
             this.Col_Armor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Col_Armor.HeaderText = "Armor";
             this.Col_Armor.Name = "Col_Armor";
+            this.Col_Armor.ReadOnly = true;
             // 
             // F_ArmorsWindow
             // 
@@ -388,7 +392,7 @@ namespace View
             this.Panel_DataInformation.ResumeLayout(false);
             this.Panel_DataInformation.PerformLayout();
             this.TabPanel_DataBank.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Armors)).EndInit();
             this.Panel_Information.ResumeLayout(false);
             this.Panel_Information.PerformLayout();
             this.ResumeLayout(false);
@@ -402,7 +406,7 @@ namespace View
         private System.Windows.Forms.TableLayoutPanel TabPanel_Search;
         private System.Windows.Forms.GroupBox GroupBox_Filter;
         private System.Windows.Forms.TableLayoutPanel TabPanel_DataBank;
-        private System.Windows.Forms.DataGridView DataGridView;
+        private System.Windows.Forms.DataGridView DataGridView_Armors;
         private System.Windows.Forms.Panel Panel_Information;
         private System.Windows.Forms.Label Lbl_ItemInformation;
         private System.Windows.Forms.TextBox tbx_ItemInfo;
@@ -413,7 +417,7 @@ namespace View
         private System.Windows.Forms.Panel Panel_InputSerchSection;
         private System.Windows.Forms.TextBox tbx_Input;
         private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.Label Lbl_InsertText;
+        private System.Windows.Forms.Label Lbl_InsertValue;
         private System.Windows.Forms.Panel Panel_DataInformation;
         private System.Windows.Forms.Label lbl_NumFilter;
         private System.Windows.Forms.Label lbl_NumTotal;
