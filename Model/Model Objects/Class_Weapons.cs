@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model.Model_Objects
 {
-    /// <summary>
-    /// Objeto do tipo Weapon
-    /// </summary>
-    class Class_Weapon
+    class Class_Weapons
     {
+        //Atributos
         public string Name { get; set; }
         public string Element { get; set; }
         public string SecundaryType { get; set; }
@@ -24,5 +22,12 @@ namespace Model.Model_Objects
         public long CoinPrice { get; set; }
         public long FreemiumGoldPrice { get; set; }
         public long PremiumGoldPrice { get; set; }
+
+
+        //Atributo de pesquisa
+        /// <summary>
+        /// Este atributo é uma string contendo a conversão de todos os atributos em texto para localizar um valor
+        /// </summary>
+        public string searchIn { get; set; }
     }
 }
